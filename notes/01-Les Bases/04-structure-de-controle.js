@@ -78,6 +78,9 @@
             console.log(fruit);
             }
 
+            Avantages : Supporte **break**, **continue** et **return** si on est dans une fonction, Plus flexible pour la logique de contrôle.
+            Limites: Ne donne pas l'index directement (il faut utiliser entries() ou une variable à part si besoin).
+
         2.4 for...in
 
             Parcourt les clés (propriétés) d’un objet.
@@ -86,6 +89,18 @@
             for (let key in user) {
             console.log(key + ": " + user[key]);
             }
+
+        2.5 forEach
+
+            array.forEach((item) => {
+                if (item === 3) return; // ← cela saute simplement cette itération
+                console.log(item);
+            });
+
+            Avantages : Syntaxe claire et fonctionnelle, Pas besoin de gérer les index.
+            Limitations : Ne supporte pas break, continue ni return pour sortir de la fonction englobante.
+                          return ici ne quitte pas la boucle, mais seulement la fonction de rappel (callback).
+
 
 
     ================================================================================
